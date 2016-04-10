@@ -21,6 +21,8 @@ shared_calibre_lib="/home/books"
 ## Syncing Functions
 ##---------------------------------------------------------------------------##
 # Get the simplified book name
+# Calibre will add a random integer to the book directory name ([0-9]\+)
+# We need to remove this to compare book names in the two directories
 # $1 = book_dir
 function get_simplified_book_name {
     local local_book_dir=$1
